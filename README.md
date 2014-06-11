@@ -23,13 +23,9 @@ Installation
 In any local directory, enter the following commands:
 
 	$ git clone https://github.com/georgema1982/VogogoExercise.git
-
 	$ cd VogogoExercise
-
 	$ pip install -r requirements.txt
-
 	$ python manage.py syncdb
-
 	$ python manage.py migrate
 
 Optionally, you can run the unit tests inside the repository folder with the following command:
@@ -69,22 +65,13 @@ After items and the pricing rules are added, run the following command in the re
 If everything goes well, you should see something like:
 
 	1305    Apple
-
 	  20 @ 5/$1.80                                7.20
-
 	  3 @ 3/$1.20                                 1.20
-
 	  1 @ $0.50 ea                                0.50
-
 	1401    Orange
-
 	  12 @ 3/$1.40                                5.60
-
 	  2 @ $0.80 ea                                1.60
-
 	4011    Banana
-
 	  2 @ $0.40 ea                                0.80
-
 
 	TOTAL                                        16.90
