@@ -8,4 +8,7 @@ class Command(BaseCommand):
     args = 'code [code ...]'
 
     def handle(self, *args, **options):
+        if not args:
+            print 'Nothing to checkout'
+            return
         print_receipt(checkout(list(args), lambda code: Item.objects.get(code = code), lambda code: Price.objects.filter(item__code = code, active = True)), 50)
