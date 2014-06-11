@@ -50,7 +50,7 @@ To start the Admin, run the following command in the repository folder:
 
 	$ python manage.py runserver
 
-Then go to `http://localhost:8000/admin/ <http://localhost:8000/admin/>`__ and login with the credential you created during installation.
+Then go to http://localhost:8000/admin/ and login with the credential you created during installation.
 
 After login, go to Checkout > Items to add/edit/delete items and their pricing rules.
 
@@ -61,6 +61,21 @@ Console Program
 ---------------
 
 After items and the pricing rules are added, run the following command in the repository folder:
+
 	$ python manage.py do_checkout code1 [code2 code3 ...]
 
 > Codes should correspond to the item codes defined in the Admin. Nonexistent codes will cause the console program to fail. Codes should be separated by one space.
+
+If everything goes well, you should see something like:
+
+>1305    Apple.
+>  20 @ 5/$1.80                                7.20
+>  3 @ 3/$1.20                                 1.20
+>  1 @ $0.50 ea                                0.50
+>1401    Orange
+>  12 @ 3/$1.40                                5.60
+>  2 @ $0.80 ea                                1.60
+>4011    Banana
+>  2 @ $0.40 ea                                0.80
+>
+>TOTAL                                        16.90
