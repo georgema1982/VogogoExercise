@@ -1,6 +1,10 @@
 from itertools import groupby
 
 def checkout(codes, item_lookup, prices_lookup):
+    '''
+    item_lookup is a function that looks up the detailed item info based on code.
+    prices_lookup is a function that looks up pricing rules based on code. The returned value should be a tuple of pricing rules ordered by quantity in descending order.
+    '''
     receipt = []
     codes.sort()
     for code, group in groupby(codes):
